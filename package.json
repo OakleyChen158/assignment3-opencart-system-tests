@@ -1,0 +1,16 @@
+{
+  "name": "assignment3-opencart-system-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated TestCafe system tests for OpenCart registration, login, and logout.",
+  "scripts": {
+    "test": "testcafe chrome tests --screenshots artifacts/screenshots --screenshots-on-fails --reporter spec,json:artifacts/test-results.json",
+    "test:headless": "testcafe chrome:headless tests --screenshots artifacts/screenshots --screenshots-on-fails --reporter spec,json:artifacts/test-results.json",
+    "test:registration": "testcafe chrome:headless tests/registration.test.js --screenshots artifacts/screenshots --screenshots-on-fails",
+    "test:login": "testcafe chrome:headless tests/login.test.js --screenshots artifacts/screenshots --screenshots-on-fails",
+    "test:logout": "testcafe chrome:headless tests/logout.test.js --screenshots artifacts/screenshots --screenshots-on-fails"
+  },
+  "devDependencies": {
+    "testcafe": "3.7.6"
+  }
+}
